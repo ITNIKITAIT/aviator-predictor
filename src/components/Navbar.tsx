@@ -3,10 +3,10 @@ import Container from '../ui/Container';
 import { cn } from '../libs/cn';
 import Button from '../ui/Button';
 
-type Mode = 'aviator' | 'mines';
+type Mode = 'aviator' | 'soon';
 
 const Navbar = () => {
-    const [mode, setMode] = useState<Mode>('aviator');
+    const [mode, setMode] = useState<Mode>('soon');
 
     return (
         <header>
@@ -28,13 +28,13 @@ const Navbar = () => {
                             Aviator
                         </div>
                         <div
-                            onClick={() => setMode('mines')}
+                            onClick={() => setMode('soon')}
                             className={cn(
                                 'text-[10px] md:text-[20px] cursor-pointer leading-[13px] md:leading-[26.2px] text-center px-[22px] py-1 md:px-[51px] md:py-2 rounded-[5px] md:rounded-[12px] transition-all duration-200',
-                                mode === 'mines' &&
+                                mode === 'soon' &&
                                     'bg-lightgreen font-semibold text-[#13161B] cursor-default'
                             )}>
-                            Mines
+                            СКОРО
                         </div>
                     </div>
                     <Button className="!hidden lg:!block">
